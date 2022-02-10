@@ -1,0 +1,265 @@
+*{
+     margin: 0 ;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+}
+nav{
+    
+     box-shadow: 1px 1px 2px #c59e9e;
+}
+.navbar-brand{
+     font-size: 50px;
+     font-weight: 700;
+     color: #03032c;
+}
+.fa-face-laugh{
+     color: #de0d8e;
+}
+.hero-area{
+     width: 100%;
+     height: 90vh;
+     background-color: #07051fda;
+     background-image: url(/image/bg-1.jpg);
+     background-size: cover;
+     background-position: center
+}
+.overlay{
+     background-color: rgba(21, 22, 22, 0.575);
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     color: white;
+}
+.overlay h1{
+     font-size: 60px;
+     
+}
+.overlay a{
+     text-decoration: none;
+     font-size: 18px;
+}
+.buttons{
+     margin-top: 20px;
+}
+/*====================================================
+              Home Page Styling End Here 
+   ====================================================*/
+
+/*====================================================
+               Login page Styling start here 
+   ====================================================*/
+.login-page{
+     background-color: #1a22269f;
+}
+
+/* .login-div{
+     margin-top: 60px;
+} */
+ .login-box {
+     margin-top: 75px;
+     height: auto;
+     background: #1A2226;
+     text-align: center;
+     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+     border-radius: 10px;
+ }
+ 
+ .login-key {
+     height: 100px;
+     font-size: 80px;
+     line-height: 100px;
+     background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }
+ 
+ .login-title {
+     margin-top: 15px;
+     text-align: center;
+     font-size: 30px;
+     letter-spacing: 2px;
+     margin-top: 15px;
+     font-weight: bold;
+     color: #ECF0F5;
+ }
+ 
+ .login-form {
+     margin-top: 25px;
+     text-align: left;
+ }
+ 
+ input[type=text] {
+     background-color: #1A2226;
+     border: none;
+     border-bottom: 2px solid #0DB8DE;
+     border-top: 0px;
+     border-radius: 0px;
+     font-weight: bold;
+     outline: 0;
+     margin-bottom: 20px;
+     padding-left: 0px;
+     color: #ECF0F5;
+ }
+ 
+ input[type=password] {
+     background-color: #1A2226;
+     border: none;
+     border-bottom: 2px solid #0DB8DE;
+     border-top: 0px;
+     border-radius: 0px;
+     font-weight: bold;
+     outline: 0;
+     padding-left: 0px;
+     margin-bottom: 20px;
+     color: #ECF0F5;
+ }
+ 
+ .form-group {
+     margin-bottom: 40px;
+     outline: 0px;
+ }
+ 
+ .form-control:focus {
+     border-color: inherit;
+     -webkit-box-shadow: none;
+     box-shadow: none;
+     border-bottom: 2px solid #0DB8DE;
+     outline: 0;
+     background-color: #1A2226;
+     color: #ECF0F5;
+ }
+ 
+ input:focus {
+     outline: none;
+     box-shadow: 0 0 0;
+ }
+ 
+ label {
+     margin-bottom: 0px;
+ }
+ 
+ .form-control-label {
+     font-size: 10px;
+     color: #6C6C6C;
+     font-weight: bold;
+     letter-spacing: 1px;
+ }
+ 
+ .btn-outline-primary {
+     border-color: #0DB8DE;
+     color: #0DB8DE;
+     border-radius: 0px;
+     font-weight: bold;
+     letter-spacing: 1px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+ }
+ 
+ .btn-outline-primary:hover {
+     background-color: #0DB8DE;
+     right: 0px;
+ }
+ 
+ .login-btm {
+     float: left;
+ }
+ 
+ .login-button {
+     padding-right: 0px;
+     text-align: right;
+     margin-bottom: 25px;
+ }
+ 
+ .login-text {
+     text-align: left;
+     padding-left: 0px;
+     color: #A2A4A4;
+ }
+ 
+ .loginbttm {
+     padding: 0px;
+ }
+ /*====================================================
+               Login page Styling End here.
+   ====================================================*/
+
+ /*====================================================
+               Dashboard Styling start here.
+   ====================================================*/
+
+ .dashboard{
+     width: 100%;
+     height: 100vh;
+     background-color: #03032c;
+
+ }
+ .counter{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 70px;
+      
+ }
+ .counter .box{
+      
+      width: 32%;
+      background-color: rgba(37, 38, 70, 0);
+      box-shadow: 0px 0px 5px 0px rgb(161, 159, 159);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      
+      padding: 25px;
+ }
+ .counter .box h1{
+      font-size: 45px;
+      color: rgb(255, 255, 255);
+      font-weight: 500;
+ }
+ .counter .box h2{
+     font-size: 35px;
+     color: rgb(218, 216, 216);
+     font-weight: 400;
+}
+.second-counter{
+
+     display: flex;
+     justify-content: space-between;
+     padding-top: 70px;
+}
+.second-counter .box{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: left;
+     width: 47%;
+     background-color: rgba(37, 38, 70, 0);
+      box-shadow: 0px 0px 5px 0px rgb(161, 159, 159);
+      border-radius: 10px;
+      padding: 30px;
+
+}
+.second-counter .box h1{
+     font-size: 30px;
+     color: rgb(255, 255, 255);
+     font-weight: 500;
+}
+.second-counter input{
+     width: 80%;
+     height: 50px;
+     background-color: transparent;
+     border: 1px solid white;
+     margin-top: 10px;
+     padding: 10px;
+     border-radius: 6px;
+}
+.second-counter input:focus{
+     border: 1px solid red;
+}
+.second-counter button{
+     width: 30%;
+}

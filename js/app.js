@@ -14,7 +14,10 @@ function loginNow() {
 };
 
 // Dashboard page 
-
+// alert box 
+const alertBox1 = document.getElementById('alert-box1');
+// alert box 
+const alertBox2 = document.getElementById('alert-box2');
 // imported all Id  to Variable
 
 const deposite = document.getElementById('deposite');
@@ -27,20 +30,29 @@ const withdrawInput = document.getElementById('withdraw-input');
  
 document.getElementById("diposite-btn").addEventListener("click", depositeNow); //deposite Button To dipositeNow Function
 document.getElementById('withdraw-btn').addEventListener("click", withdrawNow); // Withdraw button To withdrawNow Function
+document.getElementById('close-btn1').addEventListener('click', closeBtn1);
+document.getElementById('close-btn2').addEventListener('click', closeBtn2);
 
 function depositeNow() {
      const depositeValue = parseInt(deposite.innerText);
      
-     const depositeNewInput = parseInt (depositeInput.value)
-    const newdepositeValue = depositeValue + depositeNewInput ;
+     
 
-    deposite.innerText = newdepositeValue ;
-    //update Main Account balance
+        const depositeNewInput = parseFloat (depositeInput.value);
+        if (depositeNewInput > 0) {
 
-    const prevMainAccount = parseInt(mainAccount.innerText);
-    const newMainAccount = prevMainAccount + depositeNewInput ;
-    mainAccount.innerText = newMainAccount ;
-
+        const newdepositeValue = depositeValue + depositeNewInput ;
+    
+        deposite.innerText = newdepositeValue ;
+        //update Main Account balance
+    
+        const prevMainAccount = parseInt(mainAccount.innerText);
+        const newMainAccount = prevMainAccount + depositeNewInput ;
+        mainAccount.innerText = newMainAccount ;
+     }
+     else{
+        alertBox1.style.display = "flex";
+     }
 
     depositeInput.value = "";
 
@@ -48,16 +60,43 @@ function depositeNow() {
 
 function withdrawNow() {
 
-     const withdrawValue = parseInt(withdraw.innerText);
+    const withdrawValue = parseInt(deposite.innerText);
      
-     const withdrawNewInput = parseInt (withdrawInput.value)
-    const newWithdarwValue = withdrawValue + withdrawNewInput ;
-    withdraw.innerText = newWithdarwValue;
-     // main account after withdraw 
+     
 
-    const prevMainAccount = parseInt(mainAccount.innerText);
-    const newMainAccount = prevMainAccount - withdrawNewInput ;
-    mainAccount.innerText = newMainAccount ;
+        const withdrawNewInput = parseFloat(withdrawInput.value);
 
-    withdrawInput.value = "";
+        const prevMainAccount = parseInt(mainAccount.innerText);
+        
+        if (withdrawNewInput > 0 && withdrawNewInput <=  prevMainAccount  ) {
+
+        const newWithdarwValue = withdrawValue + withdrawNewInput ;
+    
+        withdraw.innerText = newWithdarwValue ;
+        //update Main Account balance
+    
+       
+        
+        const newMainAccount = prevMainAccount - withdrawNewInput ;
+        mainAccount.innerText = newMainAccount ;
+        withdrawInput.value = "";
+     }
+     else{
+        withdrawInput.value = "";
+        alertBox2.style.display = "flex";
+     }
+     
+
+    
+
+   
+}
+function closeBtn1() {
+    alertBox1.style.display = "none";
+    
+}
+
+function closeBtn2() {
+    alertBox2.style.display = "none";
+    
 }

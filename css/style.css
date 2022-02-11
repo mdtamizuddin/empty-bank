@@ -197,14 +197,16 @@ nav{
 
  }
  .counter{
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      row-gap: 50px;
+      column-gap: 50px;
       padding-top: 70px;
       
  }
  .counter .box{
       
-      width: 32%;
+      width: 100%;
       background-color: rgba(37, 38, 70, 0);
       box-shadow: 0px 0px 5px 0px rgb(161, 159, 159);
       border-radius: 10px;
@@ -253,13 +255,95 @@ nav{
      height: 50px;
      background-color: transparent;
      border: 1px solid white;
-     margin-top: 10px;
+     
      padding: 10px;
      border-radius: 6px;
+     color: white;
 }
 .second-counter input:focus{
      border: 1px solid red;
 }
 .second-counter button{
      width: 30%;
+     margin-top: 20px;
 }
+
+#alert-box1{
+display: none;
+}
+#alert-box2{
+     display: none;
+}
+.alert-box p{
+  margin-top: 10px;
+}
+.alert-box i{
+     margin-top: 13px;
+     margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+     
+     /* home page responsive styling Here   */
+     .overlay h1{
+          font-size: 40px;
+          text-align: center;
+     }
+     
+     
+     /* dashboard page responsive styling here  */
+     .dashboard{
+          width: 100%;
+          height: auto;
+          background-color: #03032c;
+     
+      }
+
+     .counter{
+          display: grid;
+          grid-template-columns: auto;
+          row-gap: 20px;
+          column-gap: 20px;
+          padding-top: 70px;
+          width: 90%;
+          margin: 0 auto;
+          
+     }
+     .second-counter{
+          display: block;
+          width: 100%;
+          padding-top: 50px;
+
+     }
+     .counter .box:nth-of-type(1) {
+          order: 3;
+        }
+        
+        .counter .box:nth-of-type(2) {
+          order: 2;
+        }
+        
+        .counter .box:nth-of-type(3) {
+          order: 1;
+        }
+     .second-counter .box{
+          width: 90%;
+          margin: 0 auto;
+          margin-top: 20px;
+
+     }
+     .second-counter .box{
+       
+         
+          background-color: rgba(37, 38, 70, 0);
+           box-shadow: 0px 0px 5px 0px rgb(161, 159, 159);
+           border-radius: 10px;
+           padding: 30px;
+     
+     }
+     .second-counter .box button{
+          width: 50%;
+     }
+     
+   }
